@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: url('images/main_bgr.png');
+	background: #e8ff99;
+	border-top: 15px solid #81a100;
+}
+body > header {
+	background: url('images/header-bg.jpg') top left no-repeat;
+	border-top: 1px solid #e8ff99;
+	height: 195px;
+}
+header > h1 {
+	display: block;
+	text-align: center;
+	padding: 80px 0 0 0;
+	font-family: ponnala;
+	font-size: 100px;
+	line-height: 100px;
+	font-weight: 500;
+	color: red;
+  -webkit-text-stroke: 2px #fff;
+  -webkit-text-fill-color: ff0000;
+  /*-webkit-animation: fill 0.5s infinite alternate;*/
+  text-shadow: 2px 4px 8px #000;
+}
+
+@-webkit-keyframes fill {
+  from { -webkit-text-fill-color: green; }
+  to { -webkit-text-fill-color: #ff0000; }
+}
+
+
+
+.left_band {
+ transform: scaleX(-1);
+ width: 111px;
+ position: absolute;
+ top: 75px;
+ left: 60px;
+ }
+
+.right_band {
+ width: 111px;
+ position: absolute;
+ top: 75px;
+ right: 60px;
+ }
+.bg_center {
+	position: absolute;
+	transform: scaleX(-1);
+	z-index: -1;
+	opacity: 0.2;
+	top: 50%;
+	left: 50%;
+	margin-left: -340px;
+	
+}
+ nav {
+	background: url('images/grad_menu.png') top left repeat-x;
+	display: block;
+	height: 45px;
+}
+
+
+footer {
+	display: block;
+	min-height: 21px;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	right: 0;
+	background: url('images/border.png');
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: ponnala;
+  src: url('fonts/Ponnala.ttf');
+}
+
