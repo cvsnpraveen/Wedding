@@ -1,0 +1,6 @@
+.jumbotron.loggedIn {
+    padding: 2rem 1rem;
+}
+.container-fluid .nav.nav-pills .nav-item {
+    max-width: 75%;
+}
