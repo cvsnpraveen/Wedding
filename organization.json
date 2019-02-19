@@ -1,0 +1,10 @@
+[
+    {
+        "orgName": "admin",
+        "orgType": "admin",
+        "phone": "Admin",
+        "status": "admin",
+        "email": "admin",
+        "password": "Admin"
+    }
+]
