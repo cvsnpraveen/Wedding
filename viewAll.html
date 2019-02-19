@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome, Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron loggedIn text-center">
+        <h1>My Application</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-1 col-sm-3">
+                <h4>Welcome, Praveen</h4> <br />
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create an organization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">View All Organizations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Change Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-sm-7">
+                <h4>View All Organizations</h4>
+                <hr>
+                <br />
+                <div class="row" style="margin:0;">
+                    <table class="table table-hover col-sm-12">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Organization Name</th>
+                                <th scope="col">Organization Type</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td><input type="text" class="form-control" id="orgName" value="Mark" /></td>
+                                <td>
+                                    <select class="form-control" id="orgType">
+                                        <option name="" value="">Select Type</option>
+                                        <option name="" value="Logistics">Logistics</option>
+                                        <option name="" value="Hospital">Hospital</option>
+                                        <option name="" value="Lab">Lab</option>
+                                    </select>
+                                </td>
+                                <td>Active</td>
+                                <td><a href="#">&#x270d;</a></td>
+                                <td><a href="#">&#x2718;</a></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td><input type="text" class="form-control" id="orgName" readonly value="Mark" /></td>
+                                <td>
+                                    <select readonly class="form-control" id="orgType">
+                                        <option name="" value="">Select Type</option>
+                                        <option name="" value="Logistics">Logistics</option>
+                                        <option name="" value="Hospital">Hospital</option>
+                                        <option name="" value="Lab">Lab</option>
+                                    </select>
+                                </td>
+                                <td>Inactive</td>
+                                <td><a href="#">&#x270d;</a></td>
+                                <td><a href="#">&#x2718;</a></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td><input type="text" class="form-control" id="orgName" value="Mark" /></td>
+                                <td>
+                                    <select class="form-control" id="orgType">
+                                        <option name="" value="">Select Type</option>
+                                        <option name="" value="Logistics">Logistics</option>
+                                        <option name="" value="Hospital">Hospital</option>
+                                        <option name="" value="Lab">Lab</option>
+                                    </select>
+                                </td>
+                                <td>Active</td>
+                                <td><a href="#">&#x270d;</a></td>
+                                <td><a href="#">&#x2718;</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
