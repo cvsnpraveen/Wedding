@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome, Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron loggedIn text-center">
+        <h1>My Application</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-1 col-sm-3">
+                <h4>Welcome, Praveen</h4> <br />
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Create an organization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">View All Organizations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Change Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-sm-7">
+                <h4>Create an organization</h4><hr>
+                <form action="/action_page.php">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Organization Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="orgName" value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-3 col-form-label">Organization Type</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="orgType">
+                                <option name="" value="">Select Type</option>
+                                <option name="" value="Logistics">Logistics</option>
+                                <option name="" value="Hospital">Hospital</option>
+                                <option name="" value="Lab">Lab</option>
+                            </select>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Phone number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="orgName" value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-3 col-form-label">E-mail</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="orgType">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="orgType" class="col-sm-3 col-form-label">Status</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="orgType">
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                              </select>                            
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Create Organization</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
