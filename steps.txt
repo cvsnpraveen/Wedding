@@ -1,0 +1,6 @@
+ npm i --save express mongoose body-parser bcryptjs cors
+
+ Create a Batch File using
+ Line 1: copy Local MongoDB installation Path
+ Line 2: mongod.exe c:/users/XXXX/mongo-data
+ 
