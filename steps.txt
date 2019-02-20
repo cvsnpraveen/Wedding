@@ -1,4 +1,6 @@
 https://www.youtube.com/watch?v=V9zDNfVs7Z4
+https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-angular-mongodb-login--cms-30125
+
 
 npm i --save express mongoose body-parser bcryptjs cors
 
