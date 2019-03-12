@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <script src="jquery.min.js"></script>
 <script>
     var table = `<table width="100%" summary="summary" id="SummaryList">
@@ -2138,31 +2140,66 @@
 <span class="searchsimpletext" id="HREF_CustomAgentRDAccountFG.MONTH_PAID_UPTO_ALL_ARRAY[266]">38</span></td><td class="listgreyrowtxtleftline">
 <span class="searchsimpletext" id="HREF_CustomAgentRDAccountFG.NEXT_RD_INSTALLMENT_DATE_ALL_ARRAY[266]">28-Mar-2019</span></td></tr>
 </tbody></table>`;
+
     $(document).ready(function () {
-        const tr = $(table).find("tr"),
+	
+		var tmpObj = {},
+			tmpArr = [],
 			field = new Array("sNo", "number", "name", "denomination", "paidUpto", "dueDate");
-		var	final="",
-			tmpObj = {},
-			tmpArr = [];
 		
-        tr.map((index, row) => {
-            var td = $(row).find("td span");
-
-			final += "{";
-
-            td.map((i, cell) => {
-			if(i>1){
-                final += `"${field[i]}": "`+$(cell).text()+'",<br>';
-				tmpObj[field[i]] = $(cell).text();
+        $(table).find("tr").map((index, row) => {
+				tmpArr[index] = {};
+            $(row).find("td span").map((i, cell) => {
+			if(i>0){
+				tmpArr[index][field[i]] = $(cell).text();
 				}
             });
-			
-			final += "},";
-			tmpArr.push(tmpObj);
-
         });
 		
-		document.write("AAAA=>", final)
-		console.log("Data=>", tmpArr)
-    }); 
+		window.data = tmpArr;
+    });
+
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>	
+	
+	<div ng-app="myApp" ng-controller="myCtrl"> 
+	<button ng-click="getAllSelected()">GetAllSelected</button>
+	<br/> {{ttt}}
+
+		<table>
+		  <tr ng-repeat="x in data">
+			<td><input type="checkbox" ng-model="choosen[x.number]" value={{x.number}} name="bill"/></td>
+			<td>{{ $index+1 }}</td>
+			<td>{{ x.number }}</td>
+			<td>{{ x.name }}</td>
+			<td>{{ x.denomination }}</td>
+			<td>{{ x.dueDate }}</td>
+		  </tr>
+		</table>
+	</div>
+
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope, $http) {
+		$scope.choosen={};
+		$scope.final = [];
+		$scope.ttt = "";
+		if(window.data !== undefined){
+		  $scope.data = window.data;
+		  console.log("Data=>", $scope.data);
+		  
+		}
+		$scope.getAllSelected = function(){          
+			angular.forEach($scope.choosen,function(key,value){
+				if(key){
+					$scope.final.push(value).toString();
+					$scope.ttt = $scope.final.toString();
+					}
+			});
+		}
+	});
+	</script>
+
+</body>
+</html>
